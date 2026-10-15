@@ -2,1048 +2,563 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b1f36">
-<meta name="description" content="RPT Physics Consulting supports hospitals and cancer centers with radiopharmaceutical therapy program development, Lu-177 readiness, radiation safety, medical physics quality assurance, and multidisciplinary implementation.">
-<title>RPT Physics Consulting | Radiopharmaceutical Therapy & Medical Physics</title>
-
+<meta name="description" content="Radiopharmaceutical therapy physics consulting, Lu-177 program readiness, radiation safety, medical physics quality assurance, and multidisciplinary implementation.">
+<title>RPT Physics Consulting | Radiopharmaceutical Therapy</title>
 <style>
-:root {
-  --navy:#0b1f36;
-  --navy2:#123451;
-  --blue:#176c91;
-  --teal:#1ba99f;
-  --mint:#83e6d7;
-  --light:#f3f8fb;
-  --white:#ffffff;
-  --text:#293b4d;
-  --muted:#607488;
-  --border:#dce7ee;
-  --shadow:0 12px 35px rgba(11,31,54,.07);
+:root{
+  --navy:#0b1f36;--blue:#176c91;--teal:#1ba99f;
+  --mint:#83e6d7;--light:#f3f8fb;--text:#293b4d;
+  --muted:#607488;--border:#dce7ee;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:105px}
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  line-height:1.7;
-  background:#fff;
-}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;font:16px/1.7 Arial,Helvetica,sans-serif;color:var(--text)}
 a{color:inherit}
 .container{width:min(1180px,92%);margin:auto}
-.section{padding:88px 0}
-.section.light{background:var(--light)}
-.kicker{
-  color:var(--blue);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
+.section{padding:85px 0}
+.light{background:var(--light)}
+.kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
 h1,h2,h3{line-height:1.25}
-h2{
-  color:var(--navy);
-  font-size:clamp(29px,3.5vw,42px);
-  margin:0 0 18px;
-}
-.intro{
-  max-width:840px;
-  color:var(--muted);
-  font-size:17px;
-}
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.97);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(12px);
-}
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-  padding:17px 0;
-}
-.brand{
-  color:var(--navy);
-  text-decoration:none;
-  font-size:19px;
-  font-weight:900;
-  line-height:1.3;
-  white-space:nowrap;
-}
-.brand small{
-  display:block;
-  font-size:10px;
-  letter-spacing:1.5px;
-  color:var(--blue);
-  margin-top:4px;
-}
-nav{display:flex;flex-wrap:wrap;gap:17px}
-nav a{
-  text-decoration:none;
-  font-size:13px;
-  font-weight:700;
-}
+h2{font-size:clamp(29px,3.5vw,42px);color:var(--navy);margin:12px 0 18px}
+h3{color:var(--navy)}
+.intro{max-width:840px;color:var(--muted);font-size:17px}
+header{position:sticky;top:0;z-index:100;background:#fffffff7;border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0}
+.brand{font-size:19px;font-weight:900;color:var(--navy);text-decoration:none;line-height:1.3}
+.brand small{display:block;font-size:10px;color:var(--blue);letter-spacing:1.5px}
+nav{display:flex;flex-wrap:wrap;gap:15px}
+nav a{text-decoration:none;font-size:13px;font-weight:700}
 nav a:hover{color:var(--teal)}
-.hero{
-  position:relative;
-  overflow:hidden;
-  color:#fff;
-  background:
-    radial-gradient(circle at 84% 24%,rgba(34,187,174,.22),transparent 35%),
-    linear-gradient(115deg,#0b1f36,#164d6b);
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.12fr .88fr;
-  align-items:center;
-  gap:50px;
-  min-height:650px;
-  padding:85px 0;
-}
-.hero .eyebrow{
-  color:var(--mint);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:12px;
-  font-weight:800;
-}
-.hero h1{
-  font-size:clamp(36px,4.4vw,58px);
-  letter-spacing:-1.5px;
-  line-height:1.12;
-  margin:20px 0 24px;
-}
-.hero h1 em{
-  color:var(--mint);
-  font-style:normal;
-}
-.hero p{
-  color:#dceaf2;
-  font-size:18px;
-  max-width:690px;
-}
-.actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-}
-.button{
-  display:inline-block;
-  padding:13px 23px;
-  border-radius:7px;
-  background:var(--mint);
-  color:var(--navy);
-  font-weight:800;
-  text-decoration:none;
-  transition:transform .2s,background .2s;
-}
-.button:hover{
-  background:#b0f5e9;
-  transform:translateY(-2px);
-}
-.button.outline{
-  background:transparent;
-  border:1px solid #a6c9d9;
-  color:#fff;
-}
-.button.outline:hover{background:#ffffff15}
-.hero-visual{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:430px;
-}
-.visual-glow{
-  position:absolute;
-  width:370px;
-  height:370px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(57,213,196,.20),transparent 68%);
-  filter:blur(8px);
-}
-.visual-panel{
-  position:relative;
-  width:min(100%,450px);
-  padding:25px;
-  border:1px solid rgba(166,228,228,.27);
-  border-radius:22px;
-  background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
-  box-shadow:0 25px 65px rgba(0,0,0,.17);
-}
-.visual-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  font-size:11px;
-  letter-spacing:1.4px;
-  color:#b8e9e6;
-  font-weight:800;
-}
-.visual-top .dot{
-  width:9px;
-  height:9px;
-  background:#7ee7d6;
-  border-radius:50%;
-  display:inline-block;
-  box-shadow:0 0 15px #7ee7d6;
-}
-.atom{
-  width:100%;
-  height:260px;
-  display:block;
-}
-.visual-bottom{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-.visual-metric{
-  border:1px solid rgba(255,255,255,.16);
-  border-radius:10px;
-  padding:13px;
-  background:rgba(5,24,42,.25);
-}
-.visual-metric strong{
-  display:block;
-  color:#fff;
-  font-size:13px;
-}
-.visual-metric span{
-  color:#a7d6df;
-  font-size:11px;
-}
-.trust{
-  background:#fff;
-  border-bottom:1px solid var(--border);
-}
-.trust-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  padding:30px 0;
-}
-.trust-item{
-  display:flex;
-  gap:15px;
-  align-items:flex-start;
-}
-.trust-icon{
-  flex-shrink:0;
-  width:45px;
-  height:45px;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  background:#e4f7f3;
-  color:#08796f;
-  font-size:21px;
-  font-weight:900;
-}
-.trust-item strong{
-  display:block;
-  color:var(--navy);
-  font-size:15px;
-}
-.trust-item span{
-  display:block;
-  font-size:13px;
-  color:var(--muted);
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-  margin-top:38px;
-}
-.card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:15px;
-  padding:28px;
-  box-shadow:var(--shadow);
-  transition:transform .2s,border-color .2s;
-}
-.card:hover{
-  transform:translateY(-4px);
-  border-color:#8bcfc8;
-}
-.card-icon{
-  display:grid;
-  place-items:center;
-  width:48px;
-  height:48px;
-  border-radius:13px;
-  background:#e6f7f4;
-  color:#087d74;
-  font-size:23px;
-  font-weight:800;
-  margin-bottom:20px;
-}
-.card h3{
-  color:var(--navy);
-  font-size:19px;
-  margin:0 0 12px;
-}
-.card p{font-size:15px;margin:0}
-.expertise-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  margin-top:38px;
-}
-.expertise-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:15px;
-  padding:35px;
-  box-shadow:var(--shadow);
-  border-top:5px solid var(--teal);
-}
-.expertise-card h3{
-  font-size:24px;
-  color:var(--navy);
-  margin:15px 0;
-}
-.expertise-card p{font-size:15px}
-.pill{
-  display:inline-block;
-  padding:6px 13px;
-  border-radius:30px;
-  background:#e2f7f3;
-  color:#11675f;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.5px;
-}
-.notice{
-  background:#e5f7f3;
-  border-left:4px solid var(--teal);
-  border-radius:9px;
-  padding:23px 26px;
-  margin-top:32px;
-  font-size:15px;
-}
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  margin-top:40px;
-}
-.step{
-  position:relative;
-  padding:25px;
-  border-radius:13px;
-  background:var(--light);
-  border:1px solid var(--border);
-}
-.step-number{
-  display:inline-grid;
-  place-items:center;
-  width:42px;
-  height:42px;
-  background:var(--navy);
-  color:var(--mint);
-  border-radius:50%;
-  font-weight:800;
-  margin-bottom:13px;
-}
-.step h3{font-size:18px;color:var(--navy)}
-.step p{font-size:15px}
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:start;
-}
-.checklist{
-  list-style:none;
-  padding:0;
-  margin:20px 0;
-}
-.checklist li{
-  position:relative;
-  padding:11px 0 11px 31px;
-  border-bottom:1px solid var(--border);
-}
-.checklist li:before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  color:var(--teal);
-  font-weight:900;
-}
-.faq{
-  max-width:920px;
-  margin-top:32px;
-}
-details{
-  border:1px solid var(--border);
-  background:#fff;
-  border-radius:10px;
-  padding:19px 23px;
-  margin-bottom:12px;
-}
-summary{
-  cursor:pointer;
-  color:var(--navy);
-  font-weight:800;
-}
-details p{
-  color:var(--muted);
-  font-size:15px;
-}
-.contact{
-  background:linear-gradient(120deg,#0b1f36,#155474);
-  color:#fff;
-}
-.contact h2{color:#fff}
+.hero{color:white;background:radial-gradient(circle at 85% 25%,#1ba99f33,transparent 36%),linear-gradient(115deg,#0b1f36,#164d6b)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:45px;min-height:620px;padding:75px 0}
+.hero h1{font-size:clamp(36px,4.4vw,58px);letter-spacing:-1.3px;line-height:1.12}
+.hero h1 em{color:var(--mint);font-style:normal}
+.hero p{font-size:18px;color:#dceaf2}
+.eyebrow{color:var(--mint);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.button{display:inline-block;padding:13px 23px;border:0;border-radius:7px;background:var(--mint);color:var(--navy);font-weight:800;text-decoration:none;cursor:pointer;font:inherit}
+.button:hover{filter:brightness(1.06)}
+.button.outline{background:transparent;border:1px solid #a6c9d9;color:white}
+.visual-panel{padding:25px;border:1px solid #a6e4e444;border-radius:22px;background:#ffffff13;box-shadow:0 25px 65px #0003}
+.visual-top{display:flex;justify-content:space-between;color:#b8e9e6;font-size:11px;font-weight:800;letter-spacing:1px}
+.atom{width:100%;height:260px}
+.visual-bottom{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.visual-metric{padding:13px;background:#05182a66;border:1px solid #ffffff25;border-radius:10px}
+.visual-metric strong{display:block;font-size:13px}
+.visual-metric span{color:#a7d6df;font-size:11px}
+.trust{border-bottom:1px solid var(--border)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding:30px 0}
+.trust-item{display:flex;gap:14px}
+.trust-icon{display:grid;place-items:center;flex-shrink:0;width:45px;height:45px;background:#e4f7f3;color:#08796f;border-radius:12px;font-size:21px;font-weight:900}
+.trust-item strong{display:block;color:var(--navy);font-size:15px}
+.trust-item span{display:block;color:var(--muted);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.card,.expertise-card,.tool-panel,.check-group{background:white;border:1px solid var(--border);border-radius:15px;padding:28px;box-shadow:0 12px 35px #0b1f3610}
+.card-icon{display:grid;place-items:center;width:48px;height:48px;background:#e6f7f4;color:#087d74;border-radius:13px;font-size:22px;font-weight:800}
+.card h3{font-size:19px}
+.card p{font-size:15px;margin-bottom:0}
+.expertise-grid,.tool-grid,.interactive-checklist{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}
+.expertise-card{border-top:5px solid var(--teal)}
+.pill{display:inline-block;padding:6px 13px;border-radius:30px;background:#e2f7f3;color:#11675f;font-size:11px;font-weight:800}
+.notice{background:#e5f7f3;border-left:4px solid var(--teal);border-radius:9px;padding:22px;margin-top:30px;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.step{padding:25px;border:1px solid var(--border);border-radius:13px;background:var(--light)}
+.step-number{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--mint);font-weight:800}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.checklist{list-style:none;padding:0}
+.checklist li{padding:10px 0;border-bottom:1px solid var(--border)}
+.checklist li:before{content:"✓";color:var(--teal);font-weight:900;margin-right:12px}
+.tool-panel label{display:block;font-weight:700;margin:15px 0 6px;color:var(--navy)}
+.tool-panel input{width:100%;padding:12px;border:1px solid #a9bdca;border-radius:8px;font:inherit}
+.tool-result{font-size:clamp(29px,4vw,44px);font-weight:900;color:var(--navy)}
+.meter{height:13px;background:#dce7ee;border-radius:20px;overflow:hidden;margin:18px 0}
+.meter>div{height:100%;width:0;background:var(--teal);transition:width .25s}
+.small-note{font-size:13px;color:var(--muted)}
+.error{color:#a32828;font-weight:700}
+.check-progress{font-size:20px;font-weight:800;color:var(--navy)}
+.check-group h3{margin-top:0}
+.check-option{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid var(--border);cursor:pointer;font-size:14px}
+.check-option input{width:18px;height:18px;flex-shrink:0;accent-color:var(--teal)}
+.tool-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.tool-actions button{padding:11px 16px;border:1px solid #a9bdca;background:white;border-radius:7px;cursor:pointer}
+details{border:1px solid var(--border);border-radius:10px;padding:19px 23px;margin:12px 0;background:white}
+summary{cursor:pointer;font-weight:800;color:var(--navy)}
+details p{color:var(--muted)}
+.contact{background:linear-gradient(120deg,#0b1f36,#155474);color:white}
+.contact h2{color:white}
 .contact .intro{color:#dceaf2}
-.contact-note{font-size:13px;color:#d4e5ec}
-footer{
-  background:#081729;
-  color:#b9cad8;
-  padding:30px 0;
-  font-size:12px;
-}
-footer p{margin:8px 0}
-@media(max-width:1050px){
-  .hero-grid{grid-template-columns:1fr;gap:25px}
-  .hero-visual{min-height:350px}
-  .visual-panel{max-width:450px}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:repeat(2,1fr)}
+footer{background:#081729;color:#b9cad8;padding:30px 0;font-size:12px}
+@media(max-width:1000px){
+.hero-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.steps{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:750px){
-  .nav{flex-direction:column;align-items:flex-start}
-  nav{gap:12px}
-  .section{padding:62px 0}
-  .hero-grid{padding:65px 0;min-height:auto}
-  .trust-grid,.expertise-grid,.two{grid-template-columns:1fr}
+.nav{flex-direction:column;align-items:flex-start}
+.section{padding:60px 0}
+.trust-grid,.expertise-grid,.two,.tool-grid,.interactive-checklist{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-  .cards,.steps{grid-template-columns:1fr}
-  .hero-visual{min-height:290px}
-  .atom{height:210px}
-  .visual-panel{padding:18px}
-  .brand{white-space:normal}
+.cards,.steps{grid-template-columns:1fr}
+.atom{height:210px}
 }
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .button,.card{transition:none}
+@media print{
+header,.tool-actions,.hero{display:none!important}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#home" class="brand">
-      RPT PHYSICS CONSULTING
-      <small>RADIOPHARMACEUTICAL THERAPY SUPPORT</small>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#expertise">Our Expertise</a>
-      <a href="#process">Program Development</a>
-      <a href="#checklist">Checklist</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a href="#home" class="brand">
+RPT PHYSICS CONSULTING
+<small>RADIOPHARMACEUTICAL THERAPY SUPPORT</small>
+</a>
+<nav aria-label="Main navigation">
+<a href="#services">Services</a>
+<a href="#expertise">Expertise</a>
+<a href="#process">Program Development</a>
+<a href="#calculator">Lu-177 Calculator</a>
+<a href="#checklist">Checklist</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
 <main>
 
 <section class="hero" id="home">
-  <div class="container hero-grid">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Medical Physics | Radiation Safety | Theranostics</div>
+<h1>Medical Physics Expertise for <em>Radiopharmaceutical Therapy</em> Program Development</h1>
+<p>Helping hospitals, cancer centers, and nuclear medicine departments plan, implement, and support Lu-177 radiopharmaceutical therapy programs, including Pluvicto® treatment services.</p>
+<p>Combining therapeutic and diagnostic medical physics perspectives with practical program readiness, radiation safety, and quality assurance support.</p>
+<div class="actions">
+<a class="button" href="#contact">Request a Consultation →</a>
+<a class="button outline" href="#services">Explore Our Services</a>
+</div>
+</div>
 
-    <div>
-      <div class="eyebrow">
-        Medical Physics | Radiation Safety | Theranostics
-      </div>
-
-      <h1>
-        Medical Physics Expertise for
-        <em>Radiopharmaceutical Therapy</em>
-        Program Development
-      </h1>
-
-      <p>
-        Helping hospitals, cancer centers, and nuclear medicine
-        departments plan, implement, and support Lu-177
-        radiopharmaceutical therapy programs, including
-        Pluvicto® treatment services.
-      </p>
-
-      <p>
-        Our team combines ABR-certified therapeutic and
-        diagnostic medical physics expertise to support
-        multidisciplinary clinical program development.
-      </p>
-
-      <div class="actions">
-        <a class="button" href="#contact">
-          Request a Consultation →
-        </a>
-        <a class="button outline" href="#services">
-          Explore Our Services
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="visual-glow"></div>
-
-      <div class="visual-panel">
-        <div class="visual-top">
-          <span>RADIOPHARMACEUTICAL THERAPY</span>
-          <span><i class="dot"></i> Lu-177</span>
-        </div>
-
-        <svg class="atom"
-             viewBox="0 0 420 280"
-             role="img"
-             aria-label="Stylized scientific illustration representing radiopharmaceutical therapy">
-
-          <defs>
-            <radialGradient id="coreGlow">
-              <stop offset="0%" stop-color="#a3fff0"/>
-              <stop offset="55%" stop-color="#2cbcac"/>
-              <stop offset="100%" stop-color="#0b6077"/>
-            </radialGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="5"/>
-            </filter>
-          </defs>
-
-          <g transform="translate(210 140)"
-             fill="none"
-             stroke="#72e1d6"
-             stroke-width="1.8"
-             opacity=".75">
-            <ellipse rx="150" ry="58"/>
-            <ellipse rx="150" ry="58" transform="rotate(60)"/>
-            <ellipse rx="150" ry="58" transform="rotate(120)"/>
-          </g>
-
-          <circle cx="210" cy="140" r="47"
-                  fill="#42d7c4" opacity=".3"
-                  filter="url(#glow)"/>
-
-          <circle cx="210" cy="140" r="34"
-                  fill="url(#coreGlow)"/>
-
-          <text x="210" y="145"
-                fill="#073b4a"
-                font-size="18"
-                font-weight="bold"
-                text-anchor="middle">177</text>
-
-          <circle cx="345" cy="82" r="7" fill="#a4fff1"/>
-          <circle cx="95" cy="190" r="7" fill="#a4fff1"/>
-          <circle cx="230" cy="240" r="7" fill="#a4fff1"/>
-
-          <g stroke="#7bd8d0" opacity=".35">
-            <line x1="30" y1="30" x2="85" y2="30"/>
-            <line x1="30" y1="30" x2="30" y2="85"/>
-            <line x1="390" y1="250" x2="335" y2="250"/>
-            <line x1="390" y1="250" x2="390" y2="195"/>
-          </g>
-        </svg>
-
-        <div class="visual-bottom">
-          <div class="visual-metric">
-            <strong>Therapeutic Physics</strong>
-            <span>ABR-Certified Expertise</span>
-          </div>
-          <div class="visual-metric">
-            <strong>Diagnostic Physics</strong>
-            <span>ABR-Certified Expertise</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="visual-panel">
+<div class="visual-top"><span>RADIOPHARMACEUTICAL THERAPY</span><span>Lu-177</span></div>
+<svg class="atom" viewBox="0 0 420 280" role="img" aria-label="Stylized Lu-177 scientific illustration">
+<defs>
+<radialGradient id="coreGlow">
+<stop offset="0%" stop-color="#a3fff0"/>
+<stop offset="55%" stop-color="#2cbcac"/>
+<stop offset="100%" stop-color="#0b6077"/>
+</radialGradient>
+</defs>
+<g transform="translate(210 140)" fill="none" stroke="#72e1d6" stroke-width="1.8" opacity=".75">
+<ellipse rx="150" ry="58"/>
+<ellipse rx="150" ry="58" transform="rotate(60)"/>
+<ellipse rx="150" ry="58" transform="rotate(120)"/>
+</g>
+<circle cx="210" cy="140" r="34" fill="url(#coreGlow)"/>
+<text x="210" y="146" text-anchor="middle" fill="#073b4a" font-size="18" font-weight="bold">177</text>
+<circle cx="345" cy="82" r="7" fill="#a4fff1"/>
+<circle cx="95" cy="190" r="7" fill="#a4fff1"/>
+<circle cx="230" cy="240" r="7" fill="#a4fff1"/>
+</svg>
+<div class="visual-bottom">
+<div class="visual-metric"><strong>Therapeutic Physics</strong><span>Medical Physics Expertise</span></div>
+<div class="visual-metric"><strong>Diagnostic Physics</strong><span>Collaborative Program Support</span></div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="trust">
-  <div class="container trust-grid">
-
-    <div class="trust-item">
-      <div class="trust-icon">✓</div>
-      <div>
-        <strong>ABR-Certified Therapeutic Physics</strong>
-        <span>Clinical radiation oncology and radiation safety experience</span>
-      </div>
-    </div>
-
-    <div class="trust-item">
-      <div class="trust-icon">✓</div>
-      <div>
-        <strong>ABR-Certified Diagnostic Physics</strong>
-        <span>Diagnostic imaging physics and quality assurance expertise</span>
-      </div>
-    </div>
-
-    <div class="trust-item">
-      <div class="trust-icon">+</div>
-      <div>
-        <strong>Collaborative Program Support</strong>
-        <span>Connecting medical physics with multidisciplinary clinical teams</span>
-      </div>
-    </div>
-
-  </div>
+<div class="container trust-grid">
+<div class="trust-item"><div class="trust-icon">✓</div><div><strong>Therapeutic Medical Physics</strong><span>Radiation oncology and clinical quality assurance experience</span></div></div>
+<div class="trust-item"><div class="trust-icon">✓</div><div><strong>Diagnostic Medical Physics</strong><span>Imaging physics and technical collaboration</span></div></div>
+<div class="trust-item"><div class="trust-icon">+</div><div><strong>Multidisciplinary Support</strong><span>Connecting physics with institutional clinical teams</span></div></div>
+</div>
 </section>
 
 <section class="section" id="services">
-  <div class="container">
-    <div class="kicker">Our Services</div>
-    <h2>Medical Physics Support Across the Program Lifecycle</h2>
-    <p class="intro">
-      We help healthcare institutions evaluate the technical,
-      operational, and radiation safety considerations involved
-      in developing or expanding radiopharmaceutical therapy
-      services. Each engagement is tailored to the institution
-      and the qualifications and authorizations required.
-    </p>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-icon">01</div>
-        <h3>Program Feasibility & Readiness</h3>
-        <p>
-          Evaluate existing infrastructure, clinical workflows,
-          staffing interfaces, instrumentation, and
-          implementation gaps.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">02</div>
-        <h3>Radioactive Materials Licensing Support</h3>
-        <p>
-          Assist with supporting documentation for license
-          applications or amendments, in coordination
-          with the licensee and radiation safety officer.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">03</div>
-        <h3>Radiation Safety & Shielding</h3>
-        <p>
-          Support exposure assessments, facility evaluations,
-          shielding considerations, and radiation protection
-          planning.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">04</div>
-        <h3>Facility & Workflow Planning</h3>
-        <p>
-          Review treatment spaces, radiopharmaceutical
-          handling pathways, patient movement,
-          and operational safety procedures.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">05</div>
-        <h3>Radiation Surveys & Monitoring</h3>
-        <p>
-          Support area surveys, contamination monitoring,
-          survey documentation, and radiation safety
-          verification procedures.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">06</div>
-        <h3>Instrumentation & Quality Assurance</h3>
-        <p>
-          Assist with radiation detection instrumentation,
-          calibration records, acceptance documentation,
-          and routine quality assurance planning.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">07</div>
-        <h3>Patient Release & Waste Management</h3>
-        <p>
-          Support patient release assessment workflows,
-          radioactive waste handling procedures,
-          and radiation safety documentation.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">08</div>
-        <h3>SOPs & Staff Education</h3>
-        <p>
-          Assist with institution-specific procedures,
-          safety checklists, training materials,
-          and emergency response guidance.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">09</div>
-        <h3>Ongoing Program Support</h3>
-        <p>
-          Provide consultation for operational reviews,
-          quality improvement, documentation updates,
-          and future program development.
-        </p>
-      </article>
-
-    </div>
-  </div>
+<div class="container">
+<div class="kicker">Our Services</div>
+<h2>Medical Physics Support Across the Program Lifecycle</h2>
+<p class="intro">We help healthcare institutions evaluate technical, operational, and radiation safety considerations involved in developing or expanding radiopharmaceutical therapy services. Engagements are tailored to institutional needs and applicable professional authorizations.</p>
+<div class="cards">
+<article class="card"><div class="card-icon">01</div><h3>Program Feasibility & Readiness</h3><p>Evaluate infrastructure, workflows, staffing interfaces, instrumentation, and implementation gaps.</p></article>
+<article class="card"><div class="card-icon">02</div><h3>Radioactive Materials Licensing Support</h3><p>Assist with supporting documentation for applications or amendments in coordination with the licensee and RSO.</p></article>
+<article class="card"><div class="card-icon">03</div><h3>Radiation Safety & Shielding</h3><p>Support exposure assessments, facility evaluations, shielding considerations, and radiation protection planning.</p></article>
+<article class="card"><div class="card-icon">04</div><h3>Facility & Workflow Planning</h3><p>Review treatment spaces, radiopharmaceutical handling, patient movement, and safety procedures.</p></article>
+<article class="card"><div class="card-icon">05</div><h3>Radiation Surveys & Monitoring</h3><p>Support area surveys, contamination monitoring, documentation, and verification procedures.</p></article>
+<article class="card"><div class="card-icon">06</div><h3>Instrumentation & Quality Assurance</h3><p>Assist with detection instrumentation, calibration records, acceptance documentation, and QA planning.</p></article>
+<article class="card"><div class="card-icon">07</div><h3>Patient Release & Waste Management</h3><p>Support release assessment workflows, radioactive waste procedures, and radiation safety documentation.</p></article>
+<article class="card"><div class="card-icon">08</div><h3>SOPs & Staff Education</h3><p>Assist with institution-specific procedures, checklists, training, and emergency response guidance.</p></article>
+<article class="card"><div class="card-icon">09</div><h3>Ongoing Program Support</h3><p>Provide consultation for operational reviews, quality improvement, documentation, and expansion.</p></article>
+</div>
+</div>
 </section>
 
 <section class="section light" id="expertise">
-  <div class="container">
-    <div class="kicker">Our Expertise</div>
-    <h2>Two Medical Physics Specialties. One Collaborative Approach.</h2>
-    <p class="intro">
-      Our team includes professionals certified by the
-      American Board of Radiology in therapeutic medical
-      physics and diagnostic medical physics.
-      These complementary specialties support collaboration
-      across radiation oncology, diagnostic imaging,
-      and multidisciplinary clinical programs.
-    </p>
-
-    <div class="expertise-grid">
-
-      <article class="expertise-card">
-        <span class="pill">ABR CERTIFIED</span>
-        <h3>Therapeutic Medical Physics</h3>
-        <p>
-          Clinical radiation oncology, radiation protection,
-          quality assurance, clinical workflow evaluation,
-          and medical physics program development.
-        </p>
-        <p>
-          This background supports collaboration with
-          radiation oncology teams and radiation safety
-          personnel during program planning.
-        </p>
-      </article>
-
-      <article class="expertise-card">
-        <span class="pill">ABR CERTIFIED</span>
-        <h3>Diagnostic Medical Physics</h3>
-        <p>
-          Diagnostic imaging physics, imaging equipment
-          evaluation, image quality, radiation dose
-          considerations, and quality assurance.
-        </p>
-        <p>
-          This background supports collaboration
-          with imaging departments and other
-          multidisciplinary clinical services.
-        </p>
-      </article>
-
-    </div>
-
-    <div class="notice">
-      <strong>Professional Scope:</strong>
-      ABR certification in therapeutic or diagnostic
-      medical physics does not by itself establish
-      nuclear medical physics certification or confer
-      radioactive materials license authorization.
-      Regulated activities must be performed or supervised
-      by appropriately qualified and authorized personnel.
-    </div>
-  </div>
+<div class="container">
+<div class="kicker">Our Expertise</div>
+<h2>Complementary Medical Physics Perspectives. One Collaborative Approach.</h2>
+<p class="intro">Therapeutic and diagnostic medical physics expertise can support collaboration across radiation oncology, imaging, radiation safety, and multidisciplinary radiopharmaceutical therapy programs.</p>
+<div class="expertise-grid">
+<article class="expertise-card">
+<span class="pill">THERAPEUTIC MEDICAL PHYSICS</span>
+<h3>Radiation Oncology & Quality Assurance</h3>
+<p>Clinical radiation oncology, radiation protection, quality assurance, workflow evaluation, and program development.</p>
+</article>
+<article class="expertise-card">
+<span class="pill">DIAGNOSTIC MEDICAL PHYSICS</span>
+<h3>Imaging & Technical Evaluation</h3>
+<p>Imaging equipment evaluation, image quality, radiation dose considerations, and technical collaboration with imaging departments.</p>
+</article>
+</div>
+<div class="notice"><strong>Professional Scope:</strong> ABR certification in therapeutic or diagnostic medical physics does not itself establish nuclear medical physics certification or radioactive materials license authorization. Regulated activities must be performed by appropriately qualified and authorized personnel. Professional credential statements should reflect the actual qualifications of participating consultants.</div>
+</div>
 </section>
 
 <section class="section" id="process">
-  <div class="container">
-    <div class="kicker">Program Development</div>
-    <h2>A Practical Path to Lu-177 Program Readiness</h2>
-    <p class="intro">
-      Launching a radiopharmaceutical therapy program
-      requires coordination among physicians,
-      nuclear medicine staff, radiation safety personnel,
-      medical physicists, administrators,
-      and other institutional stakeholders.
-    </p>
-
-    <div class="steps">
-
-      <div class="step">
-        <span class="step-number">1</span>
-        <h3>Initial Consultation</h3>
-        <p>
-          Define program objectives, existing
-          capabilities, institutional needs,
-          and anticipated timelines.
-        </p>
-      </div>
-
-      <div class="step">
-        <span class="step-number">2</span>
-        <h3>Readiness Assessment</h3>
-        <p>
-          Review facilities, instrumentation,
-          licensing status, radiation safety
-          procedures, and workflow requirements.
-        </p>
-      </div>
-
-      <div class="step">
-        <span class="step-number">3</span>
-        <h3>Implementation Support</h3>
-        <p>
-          Assist with documentation,
-          radiation protection planning,
-          quality assurance, and readiness reviews.
-        </p>
-      </div>
-
-      <div class="step">
-        <span class="step-number">4</span>
-        <h3>Ongoing Support</h3>
-        <p>
-          Support operational improvements,
-          quality reviews, documentation,
-          and future program expansion.
-        </p>
-      </div>
-
-    </div>
-  </div>
+<div class="container">
+<div class="kicker">Program Development</div>
+<h2>A Practical Path to Lu-177 Program Readiness</h2>
+<p class="intro">Launching radiopharmaceutical therapy requires coordination among physicians, nuclear medicine staff, radiation safety personnel, physicists, pharmacy, nursing, and institutional leadership.</p>
+<div class="steps">
+<div class="step"><span class="step-number">1</span><h3>Initial Consultation</h3><p>Define objectives, existing capabilities, institutional needs, and timelines.</p></div>
+<div class="step"><span class="step-number">2</span><h3>Readiness Assessment</h3><p>Review facilities, instrumentation, licensing, radiation safety, and workflows.</p></div>
+<div class="step"><span class="step-number">3</span><h3>Implementation Support</h3><p>Assist with documentation, radiation protection, QA, and readiness reviews.</p></div>
+<div class="step"><span class="step-number">4</span><h3>Ongoing Support</h3><p>Support operational improvements, documentation, and program expansion.</p></div>
+</div>
+</div>
 </section>
 
-<section class="section light" id="checklist">
-  <div class="container two">
-
-    <div>
-      <div class="kicker">Startup Checklist</div>
-      <h2>Is Your Institution Ready for Lu-177 Therapy?</h2>
-      <p>
-        Hospitals planning Pluvicto or other
-        radiopharmaceutical therapy services
-        should evaluate clinical, technical,
-        operational, and regulatory requirements
-        before initiating treatment.
-      </p>
-      <p>
-        This preliminary checklist can help identify
-        topics for further review. It is not a substitute
-        for a formal clinical or regulatory
-        readiness assessment.
-      </p>
-      <a class="button" href="#contact">
-        Discuss Your Readiness →
-      </a>
-    </div>
-
-    <div>
-      <ul class="checklist">
-        <li>Appropriate radioactive materials license coverage</li>
-        <li>Qualified and authorized clinical personnel</li>
-        <li>Designated radiation safety oversight</li>
-        <li>Suitable treatment and radiopharmaceutical handling areas</li>
-        <li>Radiation survey and contamination monitoring equipment</li>
-        <li>Documented treatment and safety procedures</li>
-        <li>Patient release evaluation and instructions</li>
-        <li>Radioactive waste management procedures</li>
-        <li>Staff education and emergency response planning</li>
-        <li>Quality assurance and recordkeeping processes</li>
-      </ul>
-    </div>
-
-  </div>
+<section class="section light" id="calculator">
+<div class="container">
+<div class="kicker">Interactive Physics Tool</div>
+<h2>Lu-177 Radioactive Decay Calculator</h2>
+<p class="intro">Estimate remaining physical activity using a Lu-177 physical half-life of 6.647 days. This tool models radioactive decay only, not biological clearance.</p>
+<div class="tool-grid">
+<div class="tool-panel">
+<h3>Input Parameters</h3>
+<label for="lu-initial">Initial Activity (GBq)</label>
+<input id="lu-initial" type="number" min="0" step="any" value="7.4">
+<label for="lu-days">Elapsed Time (Days)</label>
+<input id="lu-days" type="number" min="0" step="any" value="7">
+<div class="tool-actions"><button type="button" id="lu-reset">Reset Calculator</button></div>
+<p class="small-note">Equation: A(t) = A₀ × 2<sup>−t / 6.647</sup></p>
+</div>
+<div class="tool-panel">
+<h3>Calculated Results</h3>
+<div>Remaining Activity</div>
+<div class="tool-result"><span id="lu-result">—</span> <small style="font-size:16px">GBq</small></div>
+<div class="meter"><div id="lu-meter"></div></div>
+<p>Remaining fraction: <strong id="lu-percent">—</strong></p>
+<p id="lu-error" class="error" role="alert"></p>
+</div>
+</div>
+<div class="notice"><strong>Educational use only.</strong> Not a patient-specific absorbed-dose calculation, activity assay, patient release determination, or clinical treatment-planning tool. Confirm measurements and applicable procedures independently.</div>
+</div>
 </section>
 
-<section class="section" id="about">
-  <div class="container two">
-
-    <div>
-      <div class="kicker">About Us</div>
-      <h2>Independent, Collaborative Medical Physics Consulting</h2>
-      <p>
-        RPT Physics Consulting brings together therapeutic
-        and diagnostic medical physics perspectives
-        to help healthcare organizations evaluate
-        and develop complex clinical programs.
-      </p>
-      <p>
-        We emphasize radiation safety, technical quality,
-        practical workflows, clear documentation,
-        and collaboration with institutional clinical
-        and regulatory leadership.
-      </p>
-    </div>
-
-    <div>
-      <h3>Who We Support</h3>
-      <ul class="checklist">
-        <li>Hospitals and Cancer Centers</li>
-        <li>Nuclear Medicine Departments</li>
-        <li>Radiation Oncology Programs</li>
-        <li>Radiation Safety Officers</li>
-        <li>Nuclear Medicine Physicians</li>
-        <li>Diagnostic Imaging Departments</li>
-        <li>Theranostics Program Leaders</li>
-      </ul>
-    </div>
-
-  </div>
+<section class="section" id="checklist">
+<div class="container">
+<div class="kicker">Interactive Startup Checklist</div>
+<h2>Is Your Institution Ready for Lu-177 Therapy?</h2>
+<p class="intro">Track preliminary regulatory, technical, radiation safety, and operational tasks. Your selections are saved in your browser when local storage is available.</p>
+<div class="check-progress" id="check-progress">0 / 16 completed</div>
+<div class="meter"><div id="check-meter"></div></div>
+<div class="interactive-checklist" id="check-container"></div>
+<div class="tool-actions">
+<button id="check-export" type="button">Export Checklist</button>
+<button id="check-print" type="button">Print Checklist</button>
+<button id="check-reset" type="button">Reset Checklist</button>
+</div>
+<div class="notice">This checklist is a preliminary planning aid. Completion does not establish regulatory approval, authorized-user status, institutional authorization, or clinical readiness.</div>
+<div class="actions"><a class="button" href="#contact">Discuss Your Program Readiness →</a></div>
+</div>
 </section>
 
-<section class="section light" id="faq">
-  <div class="container">
-    <div class="kicker">Frequently Asked Questions</div>
-    <h2>Questions About Launching Lu-177 Therapy</h2>
+<section class="section light" id="about">
+<div class="container two">
+<div>
+<div class="kicker">About Us</div>
+<h2>Independent, Collaborative Medical Physics Consulting</h2>
+<p>RPT Physics Consulting brings together medical physics perspectives to help healthcare organizations evaluate and develop complex clinical programs.</p>
+<p>We emphasize radiation safety, technical quality, practical workflows, documentation, and collaboration with clinical and regulatory leadership.</p>
+</div>
+<div>
+<h3>Who We Support</h3>
+<ul class="checklist">
+<li>Hospitals and Cancer Centers</li>
+<li>Nuclear Medicine Departments</li>
+<li>Radiation Oncology Programs</li>
+<li>Radiation Safety Officers</li>
+<li>Nuclear Medicine Physicians</li>
+<li>Diagnostic Imaging Departments</li>
+<li>Theranostics Program Leaders</li>
+</ul>
+</div>
+</div>
+</section>
 
-    <div class="faq">
-
-      <details>
-        <summary>What is needed to establish a Pluvicto program?</summary>
-        <p>
-          Key considerations include appropriate radioactive
-          materials licensing, authorized physicians,
-          radiation safety oversight, suitable facilities,
-          trained staff, monitoring instruments,
-          clinical workflows, and required documentation.
-          Requirements vary by jurisdiction and institution.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can an existing nuclear medicine department provide Lu-177 therapy?</summary>
-        <p>
-          An existing department may provide a useful foundation,
-          but its radioactive materials license, authorized
-          personnel, equipment, facilities, and procedures
-          must be evaluated for the proposed activities.
-        </p>
-      </details>
-
-      <details>
-        <summary>Does a hospital always need a new radioactive materials license?</summary>
-        <p>
-          Not necessarily. Depending on the existing license
-          and regulatory jurisdiction, an amendment or
-          other authorization may be needed.
-          The licensee and radiation safety officer
-          should coordinate with the relevant regulator.
-        </p>
-      </details>
-
-      <details>
-        <summary>How can medical physicists support a theranostics program?</summary>
-        <p>
-          Depending on their qualifications and authorizations,
-          medical physicists may contribute to radiation
-          safety assessments, facility planning,
-          instrumentation, quality assurance,
-          imaging-related evaluations, staff education,
-          and program readiness activities.
-        </p>
-      </details>
-
-      <details>
-        <summary>Do therapeutic and diagnostic ABR certifications replace nuclear medicine authorizations?</summary>
-        <p>
-          No. These are distinct professional specialties.
-          Nuclear medical physics certification and
-          radioactive materials authorizations have
-          separate requirements where applicable.
-          Each regulated activity must be assigned
-          to appropriately qualified personnel.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can you assist an existing Lu-177 program?</summary>
-        <p>
-          Yes. Projects may include quality assurance reviews,
-          documentation improvements, radiation safety planning,
-          operational assessments, and program expansion support,
-          subject to the agreed scope of services.
-        </p>
-      </details>
-
-    </div>
-  </div>
+<section class="section" id="faq">
+<div class="container">
+<div class="kicker">Frequently Asked Questions</div>
+<h2>Questions About Launching Lu-177 Therapy</h2>
+<details><summary>What is needed to establish a Pluvicto program?</summary><p>Considerations include applicable radioactive materials licensing, authorized personnel, radiation safety oversight, suitable facilities, trained staff, instrumentation, clinical workflows, and required documentation.</p></details>
+<details><summary>Can an existing nuclear medicine department provide Lu-177 therapy?</summary><p>Possibly. Existing license scope, authorized personnel, equipment, facilities, and procedures must be evaluated for the proposed activity.</p></details>
+<details><summary>Does a hospital always need a new radioactive materials license?</summary><p>Not necessarily. Depending on the existing license and jurisdiction, an amendment or other authorization may be required. The licensee and RSO should coordinate with the regulator.</p></details>
+<details><summary>How can medical physicists support a theranostics program?</summary><p>Depending on qualifications and authorizations, physicists may contribute to radiation safety, facility planning, instrumentation, QA, imaging, education, and readiness activities.</p></details>
+<details><summary>Do therapeutic and diagnostic ABR certifications replace nuclear medicine authorizations?</summary><p>No. These are distinct professional qualifications. Each regulated activity must be assigned to appropriately qualified and authorized personnel.</p></details>
+<details><summary>Can you assist an existing Lu-177 program?</summary><p>Projects may include QA reviews, documentation improvements, radiation safety planning, operational assessments, and expansion support, subject to an agreed scope.</p></details>
+<details><summary>Does the Lu-177 calculator estimate patient dose?</summary><p>No. It models physical radioactive decay only. Patient-specific dosimetry requires additional validated clinical information and qualified review.</p></details>
+</div>
 </section>
 
 <section class="section contact" id="contact">
-  <div class="container">
-    <div class="kicker" style="color:#83e6d7">
-      Contact Us
-    </div>
-    <h2>Let's Discuss Your Radiopharmaceutical Therapy Program</h2>
-    <p class="intro">
-      Whether your institution is exploring its first
-      Lu-177 therapy service or reviewing an existing
-      program, we welcome inquiries about medical
-      physics consulting and implementation support.
-    </p>
-
-    <a class="button"
-       href="mailto:YOUR_EMAIL@example.com?subject=RPT%20Physics%20Consultation">
-       Request a Consultation →
-    </a>
-
-    <p class="contact-note">
-      Business contact email coming soon.
-      Please do not send patient-identifiable
-      or protected health information through ordinary email.
-    </p>
-  </div>
+<div class="container">
+<div class="kicker" style="color:#83e6d7">Contact Us</div>
+<h2>Let's Discuss Your Radiopharmaceutical Therapy Program</h2>
+<p class="intro">Whether your institution is exploring its first Lu-177 therapy service or reviewing an existing program, we welcome inquiries about medical physics consulting and implementation support.</p>
+<div class="actions">
+<a class="button" href="mailto:YOUR_EMAIL@example.com?subject=RPT%20Physics%20Consultation">Request a Consultation →</a>
+</div>
+<p style="font-size:13px;color:#d4e5ec">Contact email is a placeholder and is not yet active. Please do not send patient-identifiable or protected health information through ordinary email.</p>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <div class="container">
-    <p>
-      © <span id="year"></span> RPT Physics Consulting.
-      All rights reserved.
-    </p>
-    <p>
-      Independent medical physics consulting.
-      Services are subject to applicable laws,
-      professional qualifications, institutional approvals,
-      and regulatory authorizations.
-    </p>
-    <p>
-      Pluvicto® is a trademark of its respective owner.
-      RPT Physics Consulting is not affiliated with
-      or endorsed by the product manufacturer.
-    </p>
-    <p>
-      Website information is general in nature and does
-      not constitute medical, legal, or regulatory advice.
-    </p>
-  </div>
+<div class="container">
+<p>© <span id="year"></span> RPT Physics Consulting. All rights reserved.</p>
+<p>Independent medical physics consulting. Services are subject to applicable laws, professional qualifications, institutional approvals, and regulatory authorizations.</p>
+<p>Pluvicto® is a trademark of its respective owner. RPT Physics Consulting is not affiliated with or endorsed by the product manufacturer.</p>
+<p>Website information is general in nature and does not constitute medical, legal, or regulatory advice.</p>
+</div>
 </footer>
 
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
+"use strict";
+const get = id => document.getElementById(id);
+get("year").textContent = new Date().getFullYear();
 
+// Lu-177 decay calculator
+const LU_HALF_LIFE = 6.647;
+
+function calculateLuDecay(){
+  const aText = get("lu-initial").value.trim();
+  const tText = get("lu-days").value.trim();
+  const a = Number(aText);
+  const t = Number(tText);
+
+  if(!aText || !tText || !Number.isFinite(a) ||
+     !Number.isFinite(t) || a < 0 || t < 0){
+    get("lu-error").textContent =
+      "Please enter valid nonnegative values.";
+    get("lu-result").textContent = "—";
+    get("lu-percent").textContent = "—";
+    get("lu-meter").style.width = "0%";
+    return;
+  }
+
+  const fraction = Math.pow(2,-t/LU_HALF_LIFE);
+  const result = a*fraction;
+
+  get("lu-error").textContent = "";
+  get("lu-result").textContent =
+    result.toLocaleString("en-US",{maximumSignificantDigits:6});
+  get("lu-percent").textContent =
+    (fraction*100).toFixed(2)+"%";
+  get("lu-meter").style.width =
+    (fraction*100)+"%";
+}
+
+["lu-initial","lu-days"].forEach(id=>{
+  get(id).addEventListener("input",calculateLuDecay);
+});
+
+get("lu-reset").addEventListener("click",()=>{
+  get("lu-initial").value="7.4";
+  get("lu-days").value="7";
+  calculateLuDecay();
+});
+calculateLuDecay();
+
+// Interactive program startup checklist
+const groups = [
+  {
+    title:"Licensing & Governance",
+    items:[
+      "Verify NRC or Agreement State license scope and amendments",
+      "Confirm authorized users, RSO, and responsible personnel",
+      "Review current prescribing information and institutional policies",
+      "Assign governance and oversight responsibilities"
+    ]
+  },
+  {
+    title:"Facility & Radiation Safety",
+    items:[
+      "Evaluate treatment and patient movement workflows",
+      "Develop radiation survey and contamination procedures",
+      "Assess shielding and occupational/public exposure",
+      "Establish radioactive waste and patient release procedures"
+    ]
+  },
+  {
+    title:"Instrumentation & QA",
+    items:[
+      "Confirm activity measurement instrumentation and QC",
+      "Review calibration and constancy check records",
+      "Evaluate imaging and dosimetry resources if applicable",
+      "Confirm radiation survey instruments and performance checks"
+    ]
+  },
+  {
+    title:"Clinical Operations & Training",
+    items:[
+      "Coordinate nuclear medicine, pharmacy, nursing, and administration",
+      "Prepare patient instructions and post-therapy safety information",
+      "Document staff training and competency",
+      "Conduct a multidisciplinary dry run and address outstanding gaps"
+    ]
+  }
+];
+
+const storageKey="rpt-startup-checklist-phase2";
+const allItems=groups.flatMap(g=>g.items);
+let selected=new Set();
+
+try{
+  const saved=JSON.parse(localStorage.getItem(storageKey)||"[]");
+  if(Array.isArray(saved)){
+    selected=new Set(saved.filter(i=>
+      Number.isInteger(i)&&i>=0&&i<allItems.length
+    ));
+  }
+}catch(e){selected=new Set();}
+
+let itemIndex=0;
+
+groups.forEach(group=>{
+  const panel=document.createElement("div");
+  panel.className="check-group";
+
+  const heading=document.createElement("h3");
+  heading.textContent=group.title;
+  panel.appendChild(heading);
+
+  group.items.forEach(item=>{
+    const index=itemIndex++;
+    const label=document.createElement("label");
+    label.className="check-option";
+
+    const checkbox=document.createElement("input");
+    checkbox.type="checkbox";
+    checkbox.checked=selected.has(index);
+
+    checkbox.addEventListener("change",()=>{
+      if(checkbox.checked) selected.add(index);
+      else selected.delete(index);
+      updateProgress();
+    });
+
+    const span=document.createElement("span");
+    span.textContent=item;
+
+    label.append(checkbox,span);
+    panel.appendChild(label);
+  });
+
+  get("check-container").appendChild(panel);
+});
+
+function updateProgress(){
+  const count=selected.size;
+  const total=allItems.length;
+  const percent=Math.round(count/total*100);
+
+  get("check-progress").textContent =
+    `${count} / ${total} completed (${percent}%)`;
+  get("check-meter").style.width=percent+"%";
+
+  try{
+    localStorage.setItem(
+      storageKey,JSON.stringify([...selected])
+    );
+  }catch(e){}
+}
+
+function createReport(){
+  const lines=[
+    "RPT PHYSICS CONSULTING",
+    "LU-177 PROGRAM STARTUP CHECKLIST",
+    "Generated: "+new Date().toLocaleString(),
+    `Completed: ${selected.size} / ${allItems.length}`,
+    ""
+  ];
+
+  let i=0;
+  groups.forEach(group=>{
+    lines.push(group.title);
+    group.items.forEach(item=>{
+      lines.push(
+        `[${selected.has(i++)?"x":" "}] ${item}`
+      );
+    });
+    lines.push("");
+  });
+
+  lines.push(
+    "Planning aid only. Not evidence of licensing, "+
+    "authorization, or clinical readiness."
+  );
+  return lines.join("\n");
+}
+
+get("check-export").addEventListener("click",()=>{
+  const blob=new Blob([createReport()],{
+    type:"text/plain;charset=utf-8"
+  });
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement("a");
+  link.href=url;
+  link.download="lu177-startup-checklist.txt";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+
+get("check-print").addEventListener("click",()=>{
+  const win=window.open("","_blank");
+  if(!win){
+    alert("Please allow pop-ups to print.");
+    return;
+  }
+  const pre=win.document.createElement("pre");
+  pre.textContent=createReport();
+  pre.style.cssText=
+    "white-space:pre-wrap;font:14px/1.6 Arial;padding:24px";
+  win.document.title="Lu-177 Startup Checklist";
+  win.document.body.appendChild(pre);
+  win.focus();
+  win.print();
+});
+
+get("check-reset").addEventListener("click",()=>{
+  if(!confirm("Clear all checklist selections?"))return;
+  selected.clear();
+  document.querySelectorAll(
+    '#check-container input[type="checkbox"]'
+  ).forEach(input=>input.checked=false);
+  updateProgress();
+});
+
+updateProgress();
+</script>
 </body>
 </html>
